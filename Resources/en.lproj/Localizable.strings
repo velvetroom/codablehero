@@ -1,1 +1,2 @@
 fileNotFound="Codable Hero Error: File not found.";
+invalidPath="Codable Hero Error: Invalid path for specified Bundle.";
