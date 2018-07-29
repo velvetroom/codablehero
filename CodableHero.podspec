@@ -3,7 +3,7 @@ s.name             = 'CodableHero'
 s.version          = '1.0.0'
 s.summary          = 'Save and Load your models'
 s.description      = <<-DESC
-Save and Load your models
+Save and Load your models to Json
 DESC
 s.homepage         = 'https://github.com/velvetroom/codablehero'
 s.license          = { :type => "MIT", :file => "LICENSE" }
