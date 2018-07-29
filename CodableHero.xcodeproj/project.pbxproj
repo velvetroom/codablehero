@@ -87,8 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				DA5D105B210DC0E9005E323A /* CodableHero.swift */,
-				DA5D105C210DC0E9005E323A /* Implementation.swift */,
 				DA5D105A210DC0E9005E323A /* CodableHeroError.swift */,
+				DA5D105C210DC0E9005E323A /* Implementation.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
