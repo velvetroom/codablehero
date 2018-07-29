@@ -12,6 +12,8 @@
 		DA5D105F210DC0E9005E323A /* CodableHeroError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D105A210DC0E9005E323A /* CodableHeroError.swift */; };
 		DA5D1060210DC0E9005E323A /* CodableHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D105B210DC0E9005E323A /* CodableHero.swift */; };
 		DA5D1061210DC0E9005E323A /* Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D105C210DC0E9005E323A /* Implementation.swift */; };
+		DABAE29B210DD50E009CDC03 /* MockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABAE29A210DD50E009CDC03 /* MockModel.swift */; };
+		DABAE29D210DD541009CDC03 /* MockFile.json in Resources */ = {isa = PBXBuildFile; fileRef = DABAE29C210DD541009CDC03 /* MockFile.json */; };
 		DAE95A42210DC4BB00A8FE82 /* TestImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D1064210DC0F1005E323A /* TestImplementation.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		DA5D105B210DC0E9005E323A /* CodableHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableHero.swift; sourceTree = "<group>"; };
 		DA5D105C210DC0E9005E323A /* Implementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Implementation.swift; sourceTree = "<group>"; };
 		DA5D1064210DC0F1005E323A /* TestImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImplementation.swift; sourceTree = "<group>"; };
+		DABAE29A210DD50E009CDC03 /* MockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModel.swift; sourceTree = "<group>"; };
+		DABAE29C210DD541009CDC03 /* MockFile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockFile.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5D104F210DC01B005E323A /* Localizable.strings */,
+				DABAE29C210DD541009CDC03 /* MockFile.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -97,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5D1064210DC0F1005E323A /* TestImplementation.swift */,
+				DABAE29A210DD50E009CDC03 /* MockModel.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -199,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DABAE29D210DD541009CDC03 /* MockFile.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE95A42210DC4BB00A8FE82 /* TestImplementation.swift in Sources */,
+				DABAE29B210DD50E009CDC03 /* MockModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

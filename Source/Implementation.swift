@@ -56,7 +56,7 @@ class Implementation:CodableHero {
         }
     }
     
-    func load<Model:Decodable>(url:URL, completion:((Model) -> Void)?, error:((Error) -> Void)?) {
+    private func load<Model:Decodable>(url:URL, completion:((Model) -> Void)?, error:((Error) -> Void)?) {
         do {
             let model:Model = try self.load(url:url)
             DispatchQueue.main.async { completion?(model) }
@@ -65,13 +65,13 @@ class Implementation:CodableHero {
         }
     }
     
-    func save<Model:Encodable>(model:Model, url:URL) throws {
+    private func save<Model:Encodable>(model:Model, url:URL) throws {
         let data:Data = try JSONEncoder().encode(model)
         try self.delete(url:url)
         try data.write(to:url, options:Data.WritingOptions.atomic)
     }
     
-    func delete(url:URL) throws {
+    private func delete(url:URL) throws {
         if FileManager.default.fileExists(atPath:url.path) {
             try FileManager.default.removeItem(at:url)
         }
