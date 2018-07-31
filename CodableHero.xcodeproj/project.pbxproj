@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA5293272110368500C5B8A5 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5293262110368500C5B8A5 /* Factory.swift */; };
 		DA5D1046210DBEBD005E323A /* CodableHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5D1032210DBE9B005E323A /* CodableHero.framework */; };
 		DA5D1053210DC01B005E323A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA5D104F210DC01B005E323A /* Localizable.strings */; };
 		DA5D105F210DC0E9005E323A /* CodableHeroError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D105A210DC0E9005E323A /* CodableHeroError.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA5293262110368500C5B8A5 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		DA5D1032210DBE9B005E323A /* CodableHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodableHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5D1041210DBEBD005E323A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5D104D210DC008005E323A /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		DA5D1051210DC01B005E323A /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DA5293262110368500C5B8A5 /* Factory.swift */,
 				DA5D105B210DC0E9005E323A /* CodableHero.swift */,
 				DA5D105A210DC0E9005E323A /* CodableHeroError.swift */,
 				DA5D105C210DC0E9005E323A /* Implementation.swift */,
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA5293272110368500C5B8A5 /* Factory.swift in Sources */,
 				DA5D105F210DC0E9005E323A /* CodableHeroError.swift in Sources */,
 				DA5D1060210DC0E9005E323A /* CodableHero.swift in Sources */,
 				DA5D1061210DC0E9005E323A /* Implementation.swift in Sources */,
