@@ -1,8 +1,8 @@
 import Foundation
 
 class Implementation:CodableHero {
-    let directory:URL
-    let dispatch:DispatchQueue
+    private let directory:URL
+    private let dispatch:DispatchQueue
     
     init() {
         self.directory = FileManager.default.urls(for:FileManager.SearchPathDirectory.documentDirectory,
