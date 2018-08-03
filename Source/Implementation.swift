@@ -13,14 +13,14 @@ class Implementation:CodableHero {
                                       target:DispatchQueue.global(qos:DispatchQoS.QoSClass.background))
     }
     
-    func load<Model:Decodable>(path:String, completion:((Model) -> Void)?, error:((Error) -> Void)?) {
+    func load<M:Decodable>(path:String, completion:((M) -> Void)?, error:((Error) -> Void)?) {
         let url:URL = self.directory.appendingPathComponent(path)
         self.dispatch.async { [weak self] in
             self?.load(url:url, completion:completion, error:error)
         }
     }
     
-    func load<Model:Decodable>(bundle:Bundle, path:String, completion:((Model) -> Void)?, error:((Error) -> Void)?) {
+    func load<M:Decodable>(bundle:Bundle, path:String, completion:((M) -> Void)?, error:((Error) -> Void)?) {
         guard
             let url:URL = bundle.url(forResource:path, withExtension:nil)
         else {
@@ -32,7 +32,7 @@ class Implementation:CodableHero {
         }
     }
     
-    func save<Model:Encodable>(model:Model, path:String, completion:(() -> Void)?, error:((Error) -> Void)?) {
+    func save<M:Encodable>(model:M, path:String, completion:(() -> Void)?, error:((Error) -> Void)?) {
         let url:URL = self.directory.appendingPathComponent(path)
         self.dispatch.async { [weak self] in
             do {
@@ -56,16 +56,16 @@ class Implementation:CodableHero {
         }
     }
     
-    private func load<Model:Decodable>(url:URL, completion:((Model) -> Void)?, error:((Error) -> Void)?) {
+    private func load<M:Decodable>(url:URL, completion:((M) -> Void)?, error:((Error) -> Void)?) {
         do {
-            let model:Model = try self.load(url:url)
+            let model:M = try self.load(url:url)
             DispatchQueue.main.async { completion?(model) }
         } catch let throwedError {
             DispatchQueue.main.async { error?(throwedError) }
         }
     }
     
-    private func save<Model:Encodable>(model:Model, url:URL) throws {
+    private func save<M:Encodable>(model:M, url:URL) throws {
         let data:Data = try JSONEncoder().encode(model)
         try self.delete(url:url)
         try data.write(to:url, options:Data.WritingOptions.atomic)
