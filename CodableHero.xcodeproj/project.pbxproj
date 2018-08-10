@@ -50,7 +50,6 @@
 				DA5D104E210DC01B005E323A /* Resources */,
 				DA5D1033210DBE9B005E323A /* Products */,
 				DA5D104D210DC008005E323A /* Configuration */,
-				DADC0107211D973A00CCAC74 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,13 +88,6 @@
 				DADC00E3211D7F0200CCAC74 /* Factory.swift */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		DADC0107211D973A00CCAC74 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
