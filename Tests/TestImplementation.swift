@@ -28,7 +28,7 @@ class TestImplementation:XCTestCase {
         let expect:XCTestExpectation = self.expectation(description:"Not throwing")
         self.implementation.load(bundle:Bundle.main, path:"a b", completion: { (_:Int) in }, error: { (error:Error) in
             let error:CodableHeroError = error as! CodableHeroError
-            XCTAssertEqual(error.code, CodableHeroError.invalidPath.code, "Invalid error type")
+            XCTAssertEqual(error, CodableHeroError.invalidPath, "Invalid error type")
             XCTAssertEqual(Thread.current, Thread.main, "Not main thread")
             expect.fulfill()
         })
@@ -50,7 +50,7 @@ class TestImplementation:XCTestCase {
         let expect:XCTestExpectation = self.expectation(description:"Not throwing")
         self.implementation.load(path:"MockFile.json", completion: { (_:Int) in }, error: { (error:Error) in
             let error:CodableHeroError = error as! CodableHeroError
-            XCTAssertEqual(error.code, CodableHeroError.fileNotFound.code, "Invalid error type")
+            XCTAssertEqual(error, CodableHeroError.fileNotFound, "Invalid error type")
             XCTAssertEqual(Thread.current, Thread.main, "Not main thread")
             expect.fulfill()
         })
