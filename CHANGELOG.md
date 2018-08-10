@@ -1,5 +1,9 @@
 # Change log
 
+## Version 1.4
+
+- Remove prefix header file
+
 ## Version 1.3
 
 - Defined modules for supporting modular headers 
