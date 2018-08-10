@@ -7,54 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA5293272110368500C5B8A5 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5293262110368500C5B8A5 /* Factory.swift */; };
-		DA5D1046210DBEBD005E323A /* CodableHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5D1032210DBE9B005E323A /* CodableHero.framework */; };
-		DA5D1053210DC01B005E323A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA5D104F210DC01B005E323A /* Localizable.strings */; };
-		DA5D105F210DC0E9005E323A /* CodableHeroError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D105A210DC0E9005E323A /* CodableHeroError.swift */; };
-		DA5D1060210DC0E9005E323A /* CodableHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D105B210DC0E9005E323A /* CodableHero.swift */; };
-		DA5D1061210DC0E9005E323A /* Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D105C210DC0E9005E323A /* Implementation.swift */; };
 		DABAE29B210DD50E009CDC03 /* MockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABAE29A210DD50E009CDC03 /* MockModel.swift */; };
 		DABAE29D210DD541009CDC03 /* MockFile.json in Resources */ = {isa = PBXBuildFile; fileRef = DABAE29C210DD541009CDC03 /* MockFile.json */; };
+		DADC00E4211D7F0200CCAC74 /* Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC00E0211D7F0200CCAC74 /* Implementation.swift */; };
+		DADC00E5211D7F0200CCAC74 /* CodableHeroError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC00E1211D7F0200CCAC74 /* CodableHeroError.swift */; };
+		DADC00E6211D7F0200CCAC74 /* CodableHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC00E2211D7F0200CCAC74 /* CodableHero.swift */; };
+		DADC00E7211D7F0200CCAC74 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC00E3211D7F0200CCAC74 /* Factory.swift */; };
+		DADC00E9211D7F5C00CCAC74 /* libCodableHero.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DADC00D8211D7EF200CCAC74 /* libCodableHero.a */; };
 		DAE95A42210DC4BB00A8FE82 /* TestImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D1064210DC0F1005E323A /* TestImplementation.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		DA5D1047210DBEBD005E323A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DA5D1029210DBE9B005E323A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DA5D1031210DBE9B005E323A;
-			remoteInfo = CodableHero;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		DA5293262110368500C5B8A5 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
-		DA5D1032210DBE9B005E323A /* CodableHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CodableHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5D1041210DBEBD005E323A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5D104D210DC008005E323A /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Configuration; sourceTree = "<group>"; };
-		DA5D1050210DC01B005E323A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		DA5D105A210DC0E9005E323A /* CodableHeroError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableHeroError.swift; sourceTree = "<group>"; };
-		DA5D105B210DC0E9005E323A /* CodableHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableHero.swift; sourceTree = "<group>"; };
-		DA5D105C210DC0E9005E323A /* Implementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Implementation.swift; sourceTree = "<group>"; };
 		DA5D1064210DC0F1005E323A /* TestImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImplementation.swift; sourceTree = "<group>"; };
 		DABAE29A210DD50E009CDC03 /* MockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModel.swift; sourceTree = "<group>"; };
 		DABAE29C210DD541009CDC03 /* MockFile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockFile.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		DADC00D8211D7EF200CCAC74 /* libCodableHero.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCodableHero.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DADC00E0211D7F0200CCAC74 /* Implementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Implementation.swift; sourceTree = "<group>"; };
+		DADC00E1211D7F0200CCAC74 /* CodableHeroError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableHeroError.swift; sourceTree = "<group>"; };
+		DADC00E2211D7F0200CCAC74 /* CodableHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableHero.swift; sourceTree = "<group>"; };
+		DADC00E3211D7F0200CCAC74 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DA5D102F210DBE9B005E323A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DA5D103E210DBEBD005E323A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA5D1046210DBEBD005E323A /* CodableHero.framework in Frameworks */,
+				DADC00E9211D7F5C00CCAC74 /* libCodableHero.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +45,7 @@
 		DA5D1028210DBE9B005E323A = {
 			isa = PBXGroup;
 			children = (
-				DA5D1051210DC01B005E323A /* Source */,
+				DADC00DF211D7F0200CCAC74 /* Source */,
 				DA5D1055210DC024005E323A /* Tests */,
 				DA5D104E210DC01B005E323A /* Resources */,
 				DA5D1033210DBE9B005E323A /* Products */,
@@ -75,8 +56,8 @@
 		DA5D1033210DBE9B005E323A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DA5D1032210DBE9B005E323A /* CodableHero.framework */,
 				DA5D1041210DBEBD005E323A /* Tests.xctest */,
+				DADC00D8211D7EF200CCAC74 /* libCodableHero.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,21 +65,9 @@
 		DA5D104E210DC01B005E323A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DA5D104F210DC01B005E323A /* Localizable.strings */,
 				DABAE29C210DD541009CDC03 /* MockFile.json */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		DA5D1051210DC01B005E323A /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				DA5293262110368500C5B8A5 /* Factory.swift */,
-				DA5D105B210DC0E9005E323A /* CodableHero.swift */,
-				DA5D105A210DC0E9005E323A /* CodableHeroError.swift */,
-				DA5D105C210DC0E9005E323A /* Implementation.swift */,
-			);
-			path = Source;
 			sourceTree = "<group>";
 		};
 		DA5D1055210DC024005E323A /* Tests */ = {
@@ -110,37 +79,20 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		DADC00DF211D7F0200CCAC74 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DADC00E2211D7F0200CCAC74 /* CodableHero.swift */,
+				DADC00E0211D7F0200CCAC74 /* Implementation.swift */,
+				DADC00E1211D7F0200CCAC74 /* CodableHeroError.swift */,
+				DADC00E3211D7F0200CCAC74 /* Factory.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		DA5D102D210DBE9B005E323A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		DA5D1031210DBE9B005E323A /* CodableHero */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DA5D103A210DBE9B005E323A /* Build configuration list for PBXNativeTarget "CodableHero" */;
-			buildPhases = (
-				DA5D102D210DBE9B005E323A /* Headers */,
-				DA5D102E210DBE9B005E323A /* Sources */,
-				DA5D102F210DBE9B005E323A /* Frameworks */,
-				DA5D1030210DBE9B005E323A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CodableHero;
-			productName = CodableHero;
-			productReference = DA5D1032210DBE9B005E323A /* CodableHero.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		DA5D1040210DBEBD005E323A /* Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA5D1049210DBEBD005E323A /* Build configuration list for PBXNativeTarget "Tests" */;
@@ -152,12 +104,27 @@
 			buildRules = (
 			);
 			dependencies = (
-				DA5D1048210DBEBD005E323A /* PBXTargetDependency */,
 			);
 			name = Tests;
 			productName = Tests;
 			productReference = DA5D1041210DBEBD005E323A /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DADC00D7211D7EF200CCAC74 /* CodableHero */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DADC00DC211D7EF200CCAC74 /* Build configuration list for PBXNativeTarget "CodableHero" */;
+			buildPhases = (
+				DADC00D4211D7EF200CCAC74 /* Sources */,
+				DADC011C211DBBC700CCAC74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodableHero;
+			productName = CodableHero;
+			productReference = DADC00D8211D7EF200CCAC74 /* libCodableHero.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -169,10 +136,10 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = iturbide;
 				TargetAttributes = {
-					DA5D1031210DBE9B005E323A = {
+					DA5D1040210DBEBD005E323A = {
 						CreatedOnToolsVersion = 10.0;
 					};
-					DA5D1040210DBEBD005E323A = {
+					DADC00D7211D7EF200CCAC74 = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
@@ -189,21 +156,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DA5D1031210DBE9B005E323A /* CodableHero */,
+				DADC00D7211D7EF200CCAC74 /* CodableHero */,
 				DA5D1040210DBEBD005E323A /* Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DA5D1030210DBE9B005E323A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DA5D1053210DC01B005E323A /* Localizable.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DA5D103F210DBEBD005E323A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,20 +171,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		DA5D102E210DBE9B005E323A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+		DADC011C211DBBC700CCAC74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA5293272110368500C5B8A5 /* Factory.swift in Sources */,
-				DA5D105F210DC0E9005E323A /* CodableHeroError.swift in Sources */,
-				DA5D1060210DC0E9005E323A /* CodableHero.swift in Sources */,
-				DA5D1061210DC0E9005E323A /* Implementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
 		DA5D103D210DBEBD005E323A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,26 +190,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DA5D1048210DBEBD005E323A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DA5D1031210DBE9B005E323A /* CodableHero */;
-			targetProxy = DA5D1047210DBEBD005E323A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		DA5D104F210DC01B005E323A /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DA5D1050210DC01B005E323A /* en */,
+		DADC00D4211D7EF200CCAC74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DADC00E6211D7F0200CCAC74 /* CodableHero.swift in Sources */,
+				DADC00E5211D7F0200CCAC74 /* CodableHeroError.swift in Sources */,
+				DADC00E4211D7F0200CCAC74 /* Implementation.swift in Sources */,
+				DADC00E7211D7F0200CCAC74 /* Factory.swift in Sources */,
 			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXVariantGroup section */
+/* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		DA5D1038210DBE9B005E323A /* Debug */ = {
@@ -381,54 +328,6 @@
 			};
 			name = Release;
 		};
-		DA5D103B210DBE9B005E323A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Configuration/source.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = iturbide.CodableHero;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		DA5D103C210DBE9B005E323A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Configuration/source.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = iturbide.CodableHero;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		DA5D104A210DBEBD005E323A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -463,6 +362,32 @@
 			};
 			name = Release;
 		};
+		DADC00DD211D7EF200CCAC74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DADC00DE211D7EF200CCAC74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -475,20 +400,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA5D103A210DBE9B005E323A /* Build configuration list for PBXNativeTarget "CodableHero" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DA5D103B210DBE9B005E323A /* Debug */,
-				DA5D103C210DBE9B005E323A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		DA5D1049210DBEBD005E323A /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA5D104A210DBEBD005E323A /* Debug */,
 				DA5D104B210DBEBD005E323A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DADC00DC211D7EF200CCAC74 /* Build configuration list for PBXNativeTarget "CodableHero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DADC00DD211D7EF200CCAC74 /* Debug */,
+				DADC00DE211D7EF200CCAC74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

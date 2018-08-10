@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DA5D1031210DBE9B005E323A"
-               BuildableName = "CodableHero.framework"
+               BlueprintIdentifier = "DADC00D7211D7EF200CCAC74"
+               BuildableName = "libCodableHero.a"
                BlueprintName = "CodableHero"
                ReferencedContainer = "container:CodableHero.xcodeproj">
             </BuildableReference>
@@ -44,8 +44,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DA5D1031210DBE9B005E323A"
-            BuildableName = "CodableHero.framework"
+            BlueprintIdentifier = "DADC00D7211D7EF200CCAC74"
+            BuildableName = "libCodableHero.a"
             BlueprintName = "CodableHero"
             ReferencedContainer = "container:CodableHero.xcodeproj">
          </BuildableReference>
@@ -66,8 +66,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DA5D1031210DBE9B005E323A"
-            BuildableName = "CodableHero.framework"
+            BlueprintIdentifier = "DADC00D7211D7EF200CCAC74"
+            BuildableName = "libCodableHero.a"
             BlueprintName = "CodableHero"
             ReferencedContainer = "container:CodableHero.xcodeproj">
          </BuildableReference>
@@ -84,8 +84,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DA5D1031210DBE9B005E323A"
-            BuildableName = "CodableHero.framework"
+            BlueprintIdentifier = "DADC00D7211D7EF200CCAC74"
+            BuildableName = "libCodableHero.a"
             BlueprintName = "CodableHero"
             ReferencedContainer = "container:CodableHero.xcodeproj">
          </BuildableReference>
