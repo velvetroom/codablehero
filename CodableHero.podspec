@@ -13,5 +13,6 @@ s.source           = { :git => 'https://github.com/velvetroom/codablehero.git', 
 s.source_files     = 'Source/*.swift'
 s.swift_version    = '4.2'
 s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
+s.prefix_header_file = false
 s.static_framework = true
 end
