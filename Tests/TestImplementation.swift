@@ -2,7 +2,7 @@ import XCTest
 @testable import CodableHero
 
 class TestImplementation:XCTestCase {
-    private var implementation:Implementation!
+    private var implementation:CodableHero!
     private var directory:URL!
     private var path:URL!
     private struct Constants {
@@ -16,7 +16,7 @@ class TestImplementation:XCTestCase {
         do { try FileManager.default.createDirectory(
             at:self.directory, withIntermediateDirectories:true, attributes:nil) } catch { }
         self.path = directory.appendingPathComponent(Constants.fileName)
-        self.implementation = Implementation()
+        self.implementation = CodableHero()
     }
     
     override func tearDown() {

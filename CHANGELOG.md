@@ -1,5 +1,9 @@
 # Change log
 
+## Version 1.5
+
+- Remove protocol and factory
+
 ## Version 1.4
 
 - Remove prefix header file
