@@ -63,7 +63,7 @@ public class CodableHero {
     public func save<M:Encodable>(model:M, path:String) throws {
         let url = directory.appendingPathComponent(path)
         let data = try JSONEncoder().encode(model)
-        try delete(path:path)
+        try delete(path:url.path)
         try data.write(to:url, options:.atomic)
     }
     
