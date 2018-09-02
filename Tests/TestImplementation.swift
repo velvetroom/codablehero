@@ -5,89 +5,83 @@ class TestImplementation:XCTestCase {
     private var implementation:CodableHero!
     private var directory:URL!
     private var path:URL!
-    private struct Constants {
-        static let fileName:String = "test.asd"
-    }
     
     override func setUp() {
-        super.setUp()
-        self.directory = FileManager.default.urls(for:FileManager.SearchPathDirectory.documentDirectory,
-                                                  in:FileManager.SearchPathDomainMask.userDomainMask).last!
-        do { try FileManager.default.createDirectory(
-            at:self.directory, withIntermediateDirectories:true, attributes:nil) } catch { }
-        self.path = directory.appendingPathComponent(Constants.fileName)
-        self.implementation = CodableHero()
+        directory = FileManager.default.urls(for:.documentDirectory, in:.userDomainMask).last!
+        do { try FileManager.default.createDirectory(at:directory, withIntermediateDirectories:true, attributes:nil) }
+        catch { }
+        path = directory.appendingPathComponent("test.asd")
+        implementation = CodableHero()
     }
     
     override func tearDown() {
-        super.tearDown()
-        do { try FileManager.default.removeItem(at:self.path) } catch { }
+        do { try FileManager.default.removeItem(at:path) } catch { }
     }
     
     func testErrorIfInvalidPath() {
-        let expect:XCTestExpectation = self.expectation(description:"Not throwing")
-        self.implementation.load(bundle:Bundle.main, path:"a b", completion: { (_:Int) in }, error: { (error:Error) in
-            let error:CodableHeroError = error as! CodableHeroError
-            XCTAssertEqual(error, CodableHeroError.invalidPath, "Invalid error type")
-            XCTAssertEqual(Thread.current, Thread.main, "Not main thread")
+        let expect = expectation(description:String())
+        implementation.load(bundle:.main, path:"a b", completion: { (_:Int) in }, error: { (error) in
+            let error = error as! CodableHeroError
+            XCTAssertEqual(CodableHeroError.invalidPath, error)
+            XCTAssertEqual(Thread.main, Thread.current)
             expect.fulfill()
         })
-        self.waitForExpectations(timeout:0.3, handler:nil)
+        waitForExpectations(timeout:1, handler:nil)
     }
     
     func testLoadBundleSuccess() {
-        let expect:XCTestExpectation = self.expectation(description:"Not loading")
-        self.implementation.load(bundle:Bundle(for:TestImplementation.self), path:"MockFile.json",
-                                 completion: { (model:MockModel) in
-                                    XCTAssertEqual(model.title, "hello world")
-                                    XCTAssertEqual(Thread.current, Thread.main, "Not main thread")
+        let expect = expectation(description:String())
+        implementation.load(bundle:Bundle(for:TestImplementation.self), path:"MockFile.json",
+                            completion: { (model:MockModel) in
+                                    XCTAssertEqual("hello world", model.title)
+                                    XCTAssertEqual(Thread.main, Thread.current)
                                     expect.fulfill()
         }, error:nil)
-        self.waitForExpectations(timeout:0.3, handler:nil)
+        waitForExpectations(timeout:1, handler:nil)
     }
     
     func testLoadError() {
-        let expect:XCTestExpectation = self.expectation(description:"Not throwing")
-        self.implementation.load(path:"MockFile.json", completion: { (_:Int) in }, error: { (error:Error) in
-            let error:CodableHeroError = error as! CodableHeroError
-            XCTAssertEqual(error, CodableHeroError.fileNotFound, "Invalid error type")
-            XCTAssertEqual(Thread.current, Thread.main, "Not main thread")
+        let expect = expectation(description:String())
+        implementation.load(path:"MockFile.json", completion: { (_:Int) in }, error: { (error) in
+            let error = error as! CodableHeroError
+            XCTAssertEqual(CodableHeroError.fileNotFound, error)
+            XCTAssertEqual(Thread.main, Thread.current)
             expect.fulfill()
         })
-        self.waitForExpectations(timeout:0.3, handler:nil)
+        waitForExpectations(timeout:1, handler:nil)
     }
     
     func testSaveSuccess() {
-        let expect:XCTestExpectation = self.expectation(description:"Not saving")
-        self.implementation.save(model:MockModel(), path:Constants.fileName, completion: {
-            XCTAssertEqual(Thread.current, Thread.main, "Not main thread")
-            XCTAssertTrue(FileManager.default.fileExists(atPath:self.path.path), "Not saving")
+        let expect = expectation(description:String())
+        self.implementation.save(model:MockModel(), path:"test.asd", completion: {
+            XCTAssertEqual(Thread.main, Thread.current)
+            XCTAssertTrue(FileManager.default.fileExists(atPath:self.path.path))
             expect.fulfill()
         }, error:nil)
-        self.waitForExpectations(timeout:0.3, handler:nil)
+        waitForExpectations(timeout:1, handler:nil)
     }
     
     func testSaveError() {
-        let expect:XCTestExpectation = self.expectation(description:"Not throwing")
-        do { try FileManager.default.removeItem(at:self.directory) } catch { }
-        self.implementation.save(model:MockModel(), path:Constants.fileName, completion:nil, error: { (error:Error) in
-            XCTAssertEqual(Thread.current, Thread.main, "Not main thread")
+        let expect = expectation(description:String())
+        do { try FileManager.default.removeItem(at:directory) } catch { }
+        implementation.save(model:MockModel(), path:"test.asd", completion:nil, error: { (error) in
+            XCTAssertEqual(Thread.main, Thread.current)
             expect.fulfill()
         })
-        self.waitForExpectations(timeout:0.3, handler:nil)
+        waitForExpectations(timeout:1, handler:nil)
     }
     
     func testLoadSuccess() {
-        let expect:XCTestExpectation = self.expectation(description:"Not loading")
-        var original:MockModel = MockModel()
+        let expect = expectation(description:String())
+        var original = MockModel()
         original.title = "lorem ipsum"
-        self.implementation.save(model:original, path:Constants.fileName, completion: {
-            self.implementation.load(path:Constants.fileName, completion: { (model:MockModel) in
-                XCTAssertEqual(model.title, original.title)
-                XCTAssertEqual(Thread.current, Thread.main, "Not main thread")
+        implementation.save(model:original, path:"test.asd", completion: {
+            self.implementation.load(path:"test.asd", completion: { (model:MockModel) in
+                XCTAssertEqual(original.title, model.title)
+                XCTAssertEqual(Thread.main, Thread.current)
                 expect.fulfill()
             }, error:nil)
         }, error:nil)
-        self.waitForExpectations(timeout:0.3, handler:nil)
+        waitForExpectations(timeout:1, handler:nil)
     }
 }
