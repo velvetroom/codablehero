@@ -8,14 +8,13 @@ class TestImplementation:XCTestCase {
     
     override func setUp() {
         directory = FileManager.default.urls(for:.documentDirectory, in:.userDomainMask).last!
-        do { try FileManager.default.createDirectory(at:directory, withIntermediateDirectories:true, attributes:nil) }
-        catch { }
+        try? FileManager.default.createDirectory(at:directory, withIntermediateDirectories:true)
         path = directory.appendingPathComponent("test.asd")
         implementation = CodableHero()
     }
     
     override func tearDown() {
-        do { try FileManager.default.removeItem(at:path) } catch { }
+        try? FileManager.default.removeItem(at:path)
     }
     
     func testErrorIfInvalidPath() {
@@ -63,7 +62,7 @@ class TestImplementation:XCTestCase {
     
     func testSaveError() {
         let expect = expectation(description:String())
-        do { try FileManager.default.removeItem(at:directory) } catch { }
+        try? FileManager.default.removeItem(at:directory)
         implementation.save(model:MockModel(), path:"test.asd", completion:nil, error: { (error) in
             XCTAssertEqual(Thread.main, Thread.current)
             expect.fulfill()
