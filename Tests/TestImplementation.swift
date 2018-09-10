@@ -19,7 +19,7 @@ class TestImplementation:XCTestCase {
     
     func testErrorIfInvalidPath() {
         let expect = expectation(description:String())
-        implementation.load(bundle:.main, path:"a b", completion: { (_:Int) in }, error: { (error) in
+        implementation.load(bundle:.main, path:"a b", completion: { (_:Int) in }, error: { error in
             let error = error as! CodableHeroError
             XCTAssertEqual(CodableHeroError.invalidPath, error)
             XCTAssertEqual(Thread.main, Thread.current)
@@ -41,7 +41,7 @@ class TestImplementation:XCTestCase {
     
     func testLoadError() {
         let expect = expectation(description:String())
-        implementation.load(path:"MockFile.json", completion: { (_:Int) in }, error: { (error) in
+        implementation.load(path:"MockFile.json", completion: { (_:Int) in }, error: { error in
             let error = error as! CodableHeroError
             XCTAssertEqual(CodableHeroError.fileNotFound, error)
             XCTAssertEqual(Thread.main, Thread.current)
@@ -63,7 +63,7 @@ class TestImplementation:XCTestCase {
     func testSaveError() {
         let expect = expectation(description:String())
         try? FileManager.default.removeItem(at:directory)
-        implementation.save(model:MockModel(), path:"test.asd", completion:nil, error: { (error) in
+        implementation.save(model:MockModel(), path:"test.asd", completion:nil, error: { error in
             XCTAssertEqual(Thread.main, Thread.current)
             expect.fulfill()
         })
