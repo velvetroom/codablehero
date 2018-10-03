@@ -1,6 +1,6 @@
 import Foundation
 
-public enum CodableHeroError:LocalizedError {
+public enum HeroError:LocalizedError {
     case fileNotFound
     case invalidPath
     

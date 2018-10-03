@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		DABAE29B210DD50E009CDC03 /* MockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABAE29A210DD50E009CDC03 /* MockModel.swift */; };
 		DABAE29D210DD541009CDC03 /* MockFile.json in Resources */ = {isa = PBXBuildFile; fileRef = DABAE29C210DD541009CDC03 /* MockFile.json */; };
-		DADC00E4211D7F0200CCAC74 /* CodableHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC00E0211D7F0200CCAC74 /* CodableHero.swift */; };
-		DADC00E5211D7F0200CCAC74 /* CodableHeroError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC00E1211D7F0200CCAC74 /* CodableHeroError.swift */; };
+		DADC00E4211D7F0200CCAC74 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC00E0211D7F0200CCAC74 /* Hero.swift */; };
+		DADC00E5211D7F0200CCAC74 /* HeroError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADC00E1211D7F0200CCAC74 /* HeroError.swift */; };
 		DADC00E9211D7F5C00CCAC74 /* libCodableHero.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DADC00D8211D7EF200CCAC74 /* libCodableHero.a */; };
 		DAE95A42210DC4BB00A8FE82 /* TestImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D1064210DC0F1005E323A /* TestImplementation.swift */; };
 /* End PBXBuildFile section */
@@ -22,8 +22,8 @@
 		DABAE29A210DD50E009CDC03 /* MockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModel.swift; sourceTree = "<group>"; };
 		DABAE29C210DD541009CDC03 /* MockFile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockFile.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		DADC00D8211D7EF200CCAC74 /* libCodableHero.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCodableHero.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DADC00E0211D7F0200CCAC74 /* CodableHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableHero.swift; sourceTree = "<group>"; };
-		DADC00E1211D7F0200CCAC74 /* CodableHeroError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableHeroError.swift; sourceTree = "<group>"; };
+		DADC00E0211D7F0200CCAC74 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		DADC00E1211D7F0200CCAC74 /* HeroError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +78,8 @@
 		DADC00DF211D7F0200CCAC74 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DADC00E0211D7F0200CCAC74 /* CodableHero.swift */,
-				DADC00E1211D7F0200CCAC74 /* CodableHeroError.swift */,
+				DADC00E0211D7F0200CCAC74 /* Hero.swift */,
+				DADC00E1211D7F0200CCAC74 /* HeroError.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -188,8 +188,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DADC00E5211D7F0200CCAC74 /* CodableHeroError.swift in Sources */,
-				DADC00E4211D7F0200CCAC74 /* CodableHero.swift in Sources */,
+				DADC00E5211D7F0200CCAC74 /* HeroError.swift in Sources */,
+				DADC00E4211D7F0200CCAC74 /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
