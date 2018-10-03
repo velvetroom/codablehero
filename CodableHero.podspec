@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'CodableHero'
-s.version          = '1.5.46'
+s.version          = '1.6.51'
 s.summary          = 'Save and Load your models'
 s.description      = <<-DESC
 Save and Load your models to Json

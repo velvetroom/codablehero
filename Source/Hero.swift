@@ -1,10 +1,9 @@
 import Foundation
 
-public class CodableHero {
+public class Hero {
     private let directory = FileManager.default.urls(for:.documentDirectory, in:.userDomainMask).last!
     private let dispatch = DispatchQueue(label:String(), qos:.background, attributes:.concurrent,
                                          target:.global(qos:.background))
-    
     public init() { }
     
     public func load<M:Decodable>(path:String, completion:((M) -> Void)?, error:((Error) -> Void)?) {
@@ -56,7 +55,7 @@ public class CodableHero {
     }
     
     public func load<M:Decodable>(bundle:Bundle, path:String) throws -> M {
-        guard let url = bundle.url(forResource:path, withExtension:nil) else { throw CodableHeroError.invalidPath }
+        guard let url = bundle.url(forResource:path, withExtension:nil) else { throw HeroError.invalidPath }
         return try load(url:url)
     }
     
@@ -75,7 +74,7 @@ public class CodableHero {
     }
     
     private func load<M:Decodable>(url:URL) throws -> M {
-        guard FileManager.default.fileExists(atPath:url.path) else { throw CodableHeroError.fileNotFound }
+        guard FileManager.default.fileExists(atPath:url.path) else { throw HeroError.fileNotFound }
         return try JSONDecoder().decode(M.self, from:try Data(contentsOf:url, options:.uncached))
     }
 }

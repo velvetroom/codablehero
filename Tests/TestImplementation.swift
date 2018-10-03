@@ -2,27 +2,26 @@ import XCTest
 @testable import CodableHero
 
 class TestImplementation:XCTestCase {
-    private var implementation:CodableHero!
+    private var implementation:Hero!
     private var directory:URL!
     private var path:URL!
     
     override func setUp() {
         directory = FileManager.default.urls(for:.documentDirectory, in:.userDomainMask).last!
-        do { try FileManager.default.createDirectory(at:directory, withIntermediateDirectories:true, attributes:nil) }
-        catch { }
+        try? FileManager.default.createDirectory(at:directory, withIntermediateDirectories:true)
         path = directory.appendingPathComponent("test.asd")
-        implementation = CodableHero()
+        implementation = Hero()
     }
     
     override func tearDown() {
-        do { try FileManager.default.removeItem(at:path) } catch { }
+        try? FileManager.default.removeItem(at:path)
     }
     
     func testErrorIfInvalidPath() {
         let expect = expectation(description:String())
-        implementation.load(bundle:.main, path:"a b", completion: { (_:Int) in }, error: { (error) in
-            let error = error as! CodableHeroError
-            XCTAssertEqual(CodableHeroError.invalidPath, error)
+        implementation.load(bundle:.main, path:"a b", completion: { (_:Int) in }, error: { error in
+            let error = error as! HeroError
+            XCTAssertEqual(HeroError.invalidPath, error)
             XCTAssertEqual(Thread.main, Thread.current)
             expect.fulfill()
         })
@@ -42,9 +41,9 @@ class TestImplementation:XCTestCase {
     
     func testLoadError() {
         let expect = expectation(description:String())
-        implementation.load(path:"MockFile.json", completion: { (_:Int) in }, error: { (error) in
-            let error = error as! CodableHeroError
-            XCTAssertEqual(CodableHeroError.fileNotFound, error)
+        implementation.load(path:"MockFile.json", completion: { (_:Int) in }, error: { error in
+            let error = error as! HeroError
+            XCTAssertEqual(HeroError.fileNotFound, error)
             XCTAssertEqual(Thread.main, Thread.current)
             expect.fulfill()
         })
@@ -63,8 +62,8 @@ class TestImplementation:XCTestCase {
     
     func testSaveError() {
         let expect = expectation(description:String())
-        do { try FileManager.default.removeItem(at:directory) } catch { }
-        implementation.save(model:MockModel(), path:"test.asd", completion:nil, error: { (error) in
+        try? FileManager.default.removeItem(at:directory)
+        implementation.save(model:MockModel(), path:"test.asd", completion:nil, error: { error in
             XCTAssertEqual(Thread.main, Thread.current)
             expect.fulfill()
         })

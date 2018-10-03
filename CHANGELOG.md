@@ -1,5 +1,9 @@
 # Change log
 
+## Version 1.6
+
+- Refactors and name changes
+
 ## Version 1.5
 
 - Remove protocol and factory
